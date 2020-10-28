@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* This applies from 0px to 600px - MOBILE FIRST APPROACH */
+body {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  font-family: "Inknut Antiqua", serif;
+  overflow: hidden;
+}
+
+header {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vh;
+  border-bottom: 1px solid #fff;
+}
+
+header .logo {
+  height: 80%;
+  flex-basis: 30%;
+}
+
+header .logo img {
+  height: 100%;
+}
+
+header h1 {
+  font-size: 1.2em;
+}
+
+.video-container video {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  /* width: 100%; */
+  height: 100vh;
+  z-index: -10;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.sound-picker-container {
+  height: 15vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sound-picker-container button {
+  color: #fff;
+  border: none;
+  height: 60px;
+  width: 60px;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.8s linear;
+  -webkit-transition: all 0.8s linear;
+  -moz-transition: all 0.8s linear;
+  -ms-transition: all 0.8s linear;
+  -o-transition: all 0.8s linear;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  outline: none;
+}
+
+.sound-picker-container button img {
+  height: 100%;
+}
+
+.sound-picker-container button:hover {
+  box-shadow: 0px 0px 15px #fff;
+}
+
+.sound-picker-container button:nth-child(1) {
+  background: #98ea89;
+}
+
+.sound-picker-container button:nth-child(2) {
+  background: #f9f871;
+}
+
+.sound-picker-container button:nth-child(3) {
+  background: #4972a1;
+}
+
+.sound-picker-container button:nth-child(4) {
+  background: #3e4756;
+}
+
+.player-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  opacity: 0.7;
+}
+
+.player-container svg {
+  position: absolute;
+  height: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+  -moz-transform: translate(-50%, -50%) rotate(-90deg);
+  -ms-transform: translate(-50%, -50%) rotate(-90deg);
+  -o-transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+
+.player-container .play {
+  height: 8%;
+  cursor: pointer;
+}
+
+.time-display {
+  position: absolute;
+  bottom: 10vh;
+  color: #fff;
+  font-size: 20px;
+}
+
+.time-select-container {
+  margin: 0 auto;
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.time-select-container button {
+  color: #fff;
+  width: auto;
+  padding: 1vh 3vh;
+  background: none;
+  border: 2px solid #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+}
+
+.time-select-container button:hover {
+  color: #000;
+  background: #fff;
+}
+
+footer {
+  border-top: 1px solid #fff;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+@media screen and (orientation: landscape) {
+  header {
+    border-bottom: none;
+    height: 10vh;
+  }
+
+  header h1 {
+    font-size: 0.8em;
+  }
+
+  .video-container video {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .sound-picker-container {
+    height: 10vh;
+    margin: 5vh 0;
+  }
+
+  .time-display {
+    bottom: 5vh;
+    font-size: 15px;
+  }
+
+  .player-container {
+    height: 45vh;
+  }
+
+  .time-select-container {
+    height: 18vh;
+  }
+
+  footer {
+    border-top: none;
+    font-size: 0.7em;
+  }
+}
+
+/* This applies from 600px onwards - bigger screens*/
+@media (min-width: 600px) {
+}
