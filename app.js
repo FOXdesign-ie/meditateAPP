@@ -10,13 +10,8 @@ const app = () => {
     const timeDisplay = document.querySelector('.time-display');
     // Time select
     const timeSelect = document.querySelectorAll('.time-select-container button');
-    // Get the length of the outline
-    const outlineLength = outline.getTotalLength();
     // Duration 
     let exampleDuration = 600;
-    
-    outline.style.strokeDasharray = outlineLength;
-    outline.style.strokeDashoffset = outlineLength;
 
     // Choose sound and video
     soundPicker.forEach(sound => {
@@ -59,9 +54,6 @@ const app = () => {
         let elapsed = exampleDuration - currentTime;
         let seconds = Math.floor(elapsed % 60);
         let minutes = Math.floor(elapsed / 60);
-
-        let progress = outlineLength - (currentTime / exampleDuration) * outlineLength;
-        outline.style.strokeDashoffset = progress;
         // animate the text
         timeDisplay.textContent = `${minutes}:${seconds}`;
 

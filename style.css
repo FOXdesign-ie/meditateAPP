@@ -1,7 +1,17 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
   box-sizing: border-box;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* This applies from 0px to 600px - MOBILE FIRST APPROACH */
@@ -19,8 +29,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4vh;
-  border-bottom: 1px solid #fff;
+  padding: 0px 5vh;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 header .logo {
@@ -33,28 +43,32 @@ header .logo img {
 }
 
 header h1 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .video-container video {
-  position: fixed;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  left: 50%;
   top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  /* width: 100%; */
-  height: 100vh;
-  z-index: -10;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -44;
 }
 
 .sound-picker-container {
   height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -77,40 +91,55 @@ header h1 {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   outline: none;
+  opacity: 0.2;
 }
 
 .sound-picker-container button img {
   height: 100%;
 }
 
-.sound-picker-container button:hover {
+.sound-picker-container button:hover,
+.sound-picker-container button:active,
+.sound-picker-container button:focus {
   box-shadow: 0px 0px 15px #fff;
+  opacity: 1;
+}
+
+.sound-picker-container button:active,
+.sound-picker-container button:focus {
+  box-shadow: 0px 0px 15px #fff;
+  border: 1px solid #fff;
 }
 
 .sound-picker-container button:nth-child(1) {
-  background: #98ea89;
+  background: #163e6d;
 }
 
 .sound-picker-container button:nth-child(2) {
-  background: #f9f871;
+  background: #6785a4;
 }
 
 .sound-picker-container button:nth-child(3) {
-  background: #4972a1;
+  background: #f9f871;
 }
 
 .sound-picker-container button:nth-child(4) {
-  background: #3e4756;
+  background: #98ea89;
 }
 
 .player-container {
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  opacity: 0.7;
+  opacity: 0.2;
+  transition: all 0.8s linear;
+}
+
+.player-container:hover {
+  opacity: 1;
 }
 
 .player-container svg {
@@ -128,21 +157,29 @@ header h1 {
 
 .player-container .play {
   height: 8%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   cursor: pointer;
 }
 
 .time-display {
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   color: #fff;
   font-size: 20px;
 }
 
 .time-select-container {
-  margin: 0 auto;
-  height: 20vh;
+  margin: 0px auto;
+  height: 10vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -151,7 +188,7 @@ header h1 {
   width: auto;
   padding: 1vh 3vh;
   background: none;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   cursor: pointer;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -163,23 +200,33 @@ header h1 {
   -moz-transition: all 1s linear;
   -ms-transition: all 1s linear;
   -o-transition: all 1s linear;
+  opacity: 0.2;
+  outline: none;
 }
 
 .time-select-container button:hover {
   color: #000;
   background: #fff;
+  opacity: 1;
+  box-shadow: 0px 0px 15px #000;
 }
 
 footer {
-  border-top: 1px solid #fff;
-  text-align: center;
+  height: 7vh;
   font-size: 0.7rem;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
 }
 
+/* ================================================================== */
 @media screen and (orientation: landscape) {
   header {
     border-bottom: none;
     height: 10vh;
+    padding: 0 5vw;
   }
 
   header h1 {
@@ -193,7 +240,7 @@ footer {
 
   .sound-picker-container {
     height: 10vh;
-    margin: 5vh 0;
+    margin: 5vh 0px;
   }
 
   .time-display {

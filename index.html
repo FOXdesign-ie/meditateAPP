@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>MeditateAPP</title>
 </head>
 <body>
     <div class="app">
-
         <header>
             <div class="logo">
                <img src="./assets/logo.svg" alt="FOXdesign logo">
@@ -20,30 +21,30 @@
         <!-- background video -->
         <div class="video-container">
             <video loop>
-                <source src="./assets/video/forest.mp4" type="video/mp4"/>
+                <source src="./assets/video/sky.mp4" type="video/mp4"/>
             </video>
         </div>
 
         <!-- choose the sound -->
         <div class="sound-picker-container">
-            <button data-sound="./assets/audio/forest.mp3" data-video="./assets/video/forest.mp4">
-                <img src="./assets/svg/forest.svg" alt="forest" />
-            </button>
-            <button data-sound="./assets/audio/sea.mp3" data-video="./assets/video/sea.mp4">
-                <img src="./assets/svg/sea.svg" alt="sea" />
+            <button data-sound="./assets/audio/sky.mp3" data-video="./assets/video/sky.mp4">
+                <img src="./assets/svg/sky.svg" alt="sky" />
             </button>
             <button data-sound="./assets/audio/mountain.mp3" data-video="./assets/video/mountain.mp4">
                 <img src="./assets/svg/mountains.svg" alt="mountain" />
             </button>
-            <button data-sound="./assets/audio/sky.mp3" data-video="./assets/video/sky.mp4">
-                <img src="./assets/svg/sky.svg" alt="sky" />
+            <button data-sound="./assets/audio/sea.mp3" data-video="./assets/video/sea.mp4">
+                <img src="./assets/svg/sea.svg" alt="sea" />
+            </button>
+            <button data-sound="./assets/audio/forest.mp3" data-video="./assets/video/forest.mp4">
+                <img src="./assets/svg/forest.svg" alt="forest" />
             </button>
         </div>
 
         <!-- play/stop -->
         <div class="player-container">
             <audio class="sound">
-                <source src="./assets/audio/forest.mp3"/>
+                <source src="./assets/audio/sky.mp3"/>
             </audio>
             <img src="./assets/svg/play.svg" alt="#" class="play"/>
             <!-- svg  outline-->
@@ -60,19 +61,6 @@
                     stroke="white" stroke-width="20"
                 />
                 </svg>
-
-                <svg class="moving-outline"
-                    width="453" 
-                    height="453" 
-                    viewBox="0 0 453 453" fill="none" 
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <circle 
-                        cx="226.5" 
-                        cy="226.5" 
-                        r="216.5" stroke="#048400" stroke-width="20"
-                    />
-                </svg>
                 <h3 class="time-display">0:00</h3>
         </div>
 
@@ -83,9 +71,9 @@
             <button data-time="600">10 minutes</button>
         </div>
 
-        <footer>meditateAPP created by FOXdesign.ie</footer>
+        <footer>meditateAPP created by - <a href="http://foxdesign.ie" target="_blank"> FOXdesign.ie</a></footer>
     </div>
 
-    <script src="./app.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
 </body>
 </html>
