@@ -8,6 +8,9 @@
   right: 0;
   top: 0;
   z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .loader h2 {
