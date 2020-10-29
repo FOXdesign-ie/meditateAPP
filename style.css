@@ -51,15 +51,15 @@ header h1 {
 }
 
 .video-container {
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
   overflow: hidden;
 }
 
 .video-container video {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100vh;
   /* width: auto;
   height: auto; */
   left: 50%;
@@ -67,11 +67,6 @@ header h1 {
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: -44;
-}
-
-.video-container video source {
-  width: 100%;
-  height: 100%;
 }
 
 .sound-picker-container {
@@ -149,7 +144,7 @@ header h1 {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  opacity: 0.2;
+  opacity: 0.1;
   transition: all 0.8s linear;
 }
 
